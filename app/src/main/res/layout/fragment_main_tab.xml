@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/SpringGreen"
+    android:orientation="horizontal"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp">
+
+    <LinearLayout
+        android:id="@+id/tabOneLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal"
+        android:minWidth="80dp"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:tag="image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_main_no_tab01"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="text"
+            android:text="@string/home"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabTwoLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal"
+        android:minWidth="80dp"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:tag="image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_main_no_tab02"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="text"
+            android:text="@string/middle"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabThreeLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal"
+        android:minWidth="80dp"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:tag="image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_main_no_tab03"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="text"
+            android:text="@string/right"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+</LinearLayout>

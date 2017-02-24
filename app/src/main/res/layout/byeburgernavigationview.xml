@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.howdo.myapplication.ui.activity.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.example.howdo.myapplication.ui.activity.NoScrollViewPager>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bye_burger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:menu="@menu/bottom"
+        app:layout_behavior="@string/bye_burger_bottom_behavior">
+
+    </android.support.design.widget.BottomNavigationView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="@string/bye_burger_title_behavior">
+
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.CoordinatorLayout>

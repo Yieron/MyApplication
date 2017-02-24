@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2196F3</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="LightPink">#FFB6C1</color>
+    <color name="Blue">#0000FF</color>
+    <color name="DoderBlue">#1E90FF</color>
+    <color name="Yellow">#FFFF00</color>
+    <color name="BrulyWood">#DEB887</color>
+    <color name="Snow">#FFFAFA</color>
+    <color name="Black">#000000</color>
+    <color name="Silver">#C0C0C0</color>
+    <color name="DarkOrange">#FF8C00</color>
+    <color name="SpringGreen">#3CB371</color>
+    <color name="navigationBarColor">#f46444</color>
+
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
+
+    <color name="custom_imoocstyle">#eb4f38</color>
+    <color name="imoocstyle">#CA0612</color>
+
+    <color name="test_spacing1">#9674FC</color>
+    <color name="test_spacing2">#179641</color>
+    <color name="test_spacing3">#B2DB4D</color>
+    <color name="test_spacing4">#50E746</color>
+
+    <color name="srl_blue_bright">#ff00ddff</color>
+    <color name="srl_green_light">#ff99cc00</color>
+    <color name="srl_orange_light">#ffffbb33</color>
+    <color name="srl_red_light">#ffff4444</color>
+    <color name="white_light">#FFFAFA</color>
+    <color name="blue_light">#ff00ddff</color>
+
+    <!--字体颜色-->
+    <color name="text_tab_no">@color/white_light</color>
+    <color name="text_tab_selected">@color/blue_light</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="red_light">#ffff4444</color>
+    <color name="green_light">#ff99cc00</color>
+    <color name="orange_light">#ffffbb33</color>
+    <color name="tip">#88303F9F</color>
+    <!--通用背景色-->
+    <color name="common_bg">@color/white</color>
+    <!--通用触摸背景色-->
+    <color name="common_touch_bg">#E3E3E3</color>
+    <!--通用背景色-->
+    <color name="common_gray_bg">#EEEEEE</color>
+    <!--通用一级标题的颜色-->
+    <color name="common_h1">#212121</color>
+    <!--通用二级标题的颜色-->
+    <color name="common_h2">#727272</color>
+    <!--通用三级标题的颜色-->
+    <color name="common_h3">#B2B2B2</color>
+    <!--通用分割线细-->
+    <color name="common_divider_narrow">#E3E3E3</color>
+    <!--通用分割线粗-->
+    <color name="common_divider_wide">@color/light_white</color>
+
+    <color name="light_white">#EEEEEE</color>
+    <color name="light_black">#515151</color>
+    <color name="light_pink">#fb9090</color>
+    <color name="light_coffee">#A58D5E</color>
+    <color name="light_gray">#AAAAAA</color>
+    <color name="light_red">#EC4A48</color>
+    <color name="light_blue">#039BE5</color>
+    <color name="dark_red">#B93221</color>
+
+</resources>

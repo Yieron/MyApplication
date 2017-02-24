@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.howdo.myapplication.ui.activity.MainActivity">
+
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/demo" />
+
+        <Button
+            android:id="@+id/mix_text_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mixturetextview" />
+
+        <Button
+            android:id="@+id/html_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/html_demo" />
+
+        <Button
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/webview" />
+
+        <Button
+            android:id="@+id/sd_mounted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sd_mounted" />
+
+        <Button
+            android:id="@+id/byeburgernavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/byeburgernavigation" />
+
+        <Button
+            android:id="@+id/BGARefreashLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/BGARefreshLayout" />
+
+        <Button
+            android:id="@+id/webview_bga"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/WebViewBGA" />
+
+        <Button
+            android:id="@+id/main_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_tab" />
+
+        <Button
+            android:id="@+id/download_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed" />
+
+        <Button
+            android:id="@+id/current_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/current_speed" />
+
+        <Button
+            android:id="@+id/layout_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/CoordinatorLayout" />
+
+        <Button
+            android:id="@+id/pinned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pinned" />
+
+        <Button
+            android:id="@+id/dropDowmMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dropDowmMenu" />
+
+        <Button
+            android:id="@+id/bajieDropDownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dropDownMenu2" />
+
+        <Button
+            android:id="@+id/open_camera_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/open_gallery_camera" />
+    </LinearLayout>
+</ScrollView>
