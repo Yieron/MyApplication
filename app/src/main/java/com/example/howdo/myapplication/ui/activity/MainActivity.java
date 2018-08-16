@@ -52,6 +52,8 @@ public class MainActivity extends BaseActivity {
     Button bajieDropDownMenu;
     @BindView(R.id.open_camera_gallery)
     Button open_camera_gallery;
+    @BindView(R.id.first_code)
+    Button firstCode;
 
     @Override
     protected int getLayoutId() {
@@ -214,6 +216,15 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void call(Void aVoid) {
                         startActivity(new Intent(MainActivity.this, OpenGalleryAndCameraActivity.class));
+                    }
+                });
+
+        RxView.clicks(firstCode)
+                .throttleFirst(2,TimeUnit.SECONDS)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        startActivity(new Intent(MainActivity.this,FirstCodeActivity.class));
                     }
                 });
     }

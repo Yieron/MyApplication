@@ -147,4 +147,6 @@
     <string name="dropDowmMenu">dropDowmMenu</string>
     <string name="dropDownMenu2">baiJieDropMenu</string>
     <string name="open_gallery_camera">打开相机和相册</string>
+    <string name="first_code">第一行代码</string>
+    <string name="first_code_menu">第一行代码menu</string>
 </resources>

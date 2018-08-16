@@ -21,12 +21,17 @@
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.MixtureTextActivity" />
-        <activity android:name=".ui.activity.HtmlActivity" />
+        <activity android:name=".ui.activity.HtmlActivity">
+            <intent-filter>
+                <action android:name="com.example.howdo.myapplication.ui.activity.HtmlActivity.start" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.MY_CATEGORY"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".ui.activity.NormalWebViewActivity" />
         <activity android:name=".ui.activity.SDMountedActivity" />
         <activity
@@ -58,5 +63,6 @@
         <activity
             android:name=".ui.activity.OpenGalleryAndCameraActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activity.FirstCodeActivity" />
     </application>
 </manifest>
