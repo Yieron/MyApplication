@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/first_code_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_demo1" />
+
+    <Button
+        android:id="@+id/first_code_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_demo2" />
+
+    <Button
+        android:id="@+id/first_code_button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_demo3" />
+
+    <Button
+        android:id="@+id/first_code_button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_demo4" />
+    <Button
+        android:id="@+id/first_code_button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lift_recycle" />
+
+    <Button
+        android:id="@+id/first_code_button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_code_widget" />
+
+</LinearLayout>

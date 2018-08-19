@@ -21,6 +21,7 @@
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,8 +29,9 @@
         <activity android:name=".ui.activity.HtmlActivity">
             <intent-filter>
                 <action android:name="com.example.howdo.myapplication.ui.activity.HtmlActivity.start" />
+
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.example.MY_CATEGORY"/>
+                <category android:name="com.example.MY_CATEGORY" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.NormalWebViewActivity" />
@@ -64,5 +66,15 @@
             android:name=".ui.activity.OpenGalleryAndCameraActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.activity.FirstCodeActivity" />
+        <activity android:name=".ui.activity.SecondFirstCodeActivity" />
+        <activity
+            android:name=".ui.activity.ThirdFirstCodeActivity"
+            android:label="@string/title_activity_third_first_code"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity
+            android:name=".ui.activity.ForthFirstCodeActivity"
+            android:label="@string/title_activity_forth_first_code"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+
 </manifest>

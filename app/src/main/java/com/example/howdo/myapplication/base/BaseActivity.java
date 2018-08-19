@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.howdo.myapplication.R;
@@ -25,10 +26,12 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     public List<BaseActivity> activities = new ArrayList<>();
     private ProgressDialog dialog;
     public Activity mActivity;
+    private static final String TAG = "BaseActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, getClass().getSimpleName());
         activities.add(this);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
@@ -84,8 +87,11 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     public void clearAllActivity() {
         for (BaseActivity activity : activities) {
-            activity.finish();
+            if (!activity.isFinishing()) {
+                activity.finish();
+            }
         }
+        activities.clear();
     }
 
     public Toolbar initToolbar(String title) {

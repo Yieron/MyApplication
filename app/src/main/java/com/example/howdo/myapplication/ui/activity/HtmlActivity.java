@@ -1,16 +1,21 @@
 package com.example.howdo.myapplication.ui.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 import android.widget.TextView;
+
 import com.example.howdo.myapplication.R;
 import com.example.howdo.myapplication.base.BaseActivity;
+
 import java.io.InputStream;
 import java.net.URL;
 
 import butterknife.BindView;
+
 /**
  * Created by howdo on 16/10/27.
  */
@@ -23,6 +28,7 @@ public class HtmlActivity extends BaseActivity {
         return R.layout.html_text_picture;
     }
 
+    private static final String TAG = "HtmlActivity";
     String text = "<p class=\"1\" style=\"margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;\n" +
             "margin-left:0cm;text-align:justify;text-justify:inter-ideograph;text-indent:\n" +
             "0cm;mso-char-indent-count:0\"><span style=\"font-size:12.0pt;font-family:宋体;\n" +
@@ -83,17 +89,21 @@ public class HtmlActivity extends BaseActivity {
 
     @Override
     protected void afterCreate(Bundle savedInstanceState) {
+        Intent intent = getIntent();
+        String data = intent.getStringExtra("extra_data");
+        Log.d(TAG, data);
         initData();
     }
 
-    private void initData(){
-        new Thread(){
+    private void initData() {
+
+        new Thread() {
             @Override
-            public void run(){
+            public void run() {
                 final Spanned spanned = Html.fromHtml(text, new MyImageGetter(), null);
-                htmlToTextPic.post(new Runnable(){
+                htmlToTextPic.post(new Runnable() {
                     @Override
-                    public void run(){
+                    public void run() {
                         htmlToTextPic.setText(spanned);
                     }
                 });
@@ -118,7 +128,7 @@ public class HtmlActivity extends BaseActivity {
                 e.printStackTrace();
             }
             if (drawable != null) {
-                drawable.setBounds(0, 0, drawable.getIntrinsicWidth()*7, drawable.getIntrinsicHeight()*9);
+                drawable.setBounds(0, 0, drawable.getIntrinsicWidth() * 7, drawable.getIntrinsicHeight() * 9);
             }
 
             return drawable;

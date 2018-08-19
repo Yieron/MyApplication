@@ -43,7 +43,7 @@
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="detail_title">详情标题</string>
-     <string name="show_text">请不要在你拿工资的地方玩手机
+    <string name="show_text">请不要在你拿工资的地方玩手机
 
 　　当一个顾客，进店时看到店里的员工低头玩手机，会有什么感觉？
 
@@ -149,4 +149,17 @@
     <string name="open_gallery_camera">打开相机和相册</string>
     <string name="first_code">第一行代码</string>
     <string name="first_code_menu">第一行代码menu</string>
+    <string name="title_activity_third_first_code">ThirdFirstCodeActivity</string>
+    <string name="intent_demo1">隐式Intent</string>
+    <string name="intent_demo2">跳转到制定本网页</string>
+    <string name="intent_demo3">跳转到拨号</string>
+    <string name="intent_demo4">待返回结果页</string>
+    <string name="lift_recycle">生命周期</string>
+    <string name="normal_activity">这是一个正常的activity</string>
+    <string name="dialog_activity">这是一个dialog Activity</string>
+    <string name="first_code_widget">常用控件</string>
+    <string name="title_activity_forth_first_code">ForthFirstCodeActivity</string>
+    <string name="progress_hide_or_show">显示/隐藏进度条</string>
+    <string name="loading_show">显示加载</string>
+
 </resources>

@@ -3,11 +3,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <Button
-        android:id="@+id/first_code_button1"
+        android:id="@+id/first_code_button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button" />
+
+    <TextView
+        android:id="@+id/first_code_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/normal_activity" />
+
 
 </LinearLayout>

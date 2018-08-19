@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.ForthFirstCodeActivity"
+    tools:showIn="@layout/activity_forth_first_code">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/first_code_forth_button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/progress_hide_or_show" />
+
+
+        <Button
+            android:id="@+id/first_code_forth_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_show" />
+
+        <ProgressBar
+            android:id="@+id/first_code_progress_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:max="100"/>
+
+        <ListView
+            android:id="@+id/content_forth_lv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
