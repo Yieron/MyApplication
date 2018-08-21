@@ -40,4 +40,22 @@
         android:layout_height="wrap_content"
         android:text="@string/first_code_widget" />
 
+    <Button
+        android:id="@+id/first_code_button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recycleView" />
+
+    <Button
+        android:id="@+id/first_code_button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_view" />
+
+    <Button
+        android:id="@+id/first_code_button10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment" />
+
 </LinearLayout>

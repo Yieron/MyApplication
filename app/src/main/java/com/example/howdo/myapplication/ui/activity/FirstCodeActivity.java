@@ -28,6 +28,14 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
     Button LifeRecycle;
     @BindView(R.id.first_code_button7)
     Button FirstCodeButton7;
+    @BindView(R.id.first_code_button8)
+    Button FirstCodeButton8;
+    @BindView(R.id.first_code_button9)
+    Button FirstCodeButton9;
+    @BindView(R.id.first_code_button10)
+    Button FirstCodeButton10;
+
+
 
     private static final String TAG = "FirstCodeActivity";
 
@@ -83,6 +91,27 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FirstCodeActivity.this, ForthFirstCodeActivity.class);
+                startActivity(intent);
+            }
+        });
+        FirstCodeButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstCodeActivity.this, FifthFirstCodeActivity.class);
+                startActivity(intent);
+            }
+        });
+        FirstCodeButton9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstCodeActivity.this, sixthFirstCodeActivity.class);
+                startActivity(intent);
+            }
+        });
+        FirstCodeButton10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstCodeActivity.this, seventhFirstCodeActivity.class);
                 startActivity(intent);
             }
         });

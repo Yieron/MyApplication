@@ -148,6 +148,7 @@
     <string name="dropDownMenu2">baiJieDropMenu</string>
     <string name="open_gallery_camera">打开相机和相册</string>
     <string name="first_code">第一行代码</string>
+    <string name="first_code_fragment">第一行代码的fragment</string>
     <string name="first_code_menu">第一行代码menu</string>
     <string name="title_activity_third_first_code">ThirdFirstCodeActivity</string>
     <string name="intent_demo1">隐式Intent</string>
@@ -158,8 +159,15 @@
     <string name="normal_activity">这是一个正常的activity</string>
     <string name="dialog_activity">这是一个dialog Activity</string>
     <string name="first_code_widget">常用控件</string>
+    <string name="chat_view">聊天界面</string>
     <string name="title_activity_forth_first_code">ForthFirstCodeActivity</string>
     <string name="progress_hide_or_show">显示/隐藏进度条</string>
     <string name="loading_show">显示加载</string>
+    <string name="title_activity_fifth_first_code">FifthFirstCodeActivity</string>
+    <string name="title_activity_sixth_first_code">sixthFirstCodeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_seventh_first_code">seventhFirstCodeActivity</string>
 
 </resources>

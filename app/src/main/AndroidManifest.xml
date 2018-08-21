@@ -70,10 +70,22 @@
         <activity
             android:name=".ui.activity.ThirdFirstCodeActivity"
             android:label="@string/title_activity_third_first_code"
-            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+            android:theme="@style/Theme.AppCompat.Dialog" />
         <activity
             android:name=".ui.activity.ForthFirstCodeActivity"
             android:label="@string/title_activity_forth_first_code"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.FifthFirstCodeActivity"
+            android:label="@string/title_activity_fifth_first_code"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.sixthFirstCodeActivity"
+            android:label="@string/title_activity_sixth_first_code"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.seventhFirstCodeActivity"
+            android:label="@string/title_activity_seventh_first_code"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
