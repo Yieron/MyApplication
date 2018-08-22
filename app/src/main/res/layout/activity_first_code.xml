@@ -58,4 +58,10 @@
         android:layout_height="wrap_content"
         android:text="Fragment" />
 
+    <Button
+        android:id="@+id/first_code_button11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="newsFragmentDemo" />
+
 </LinearLayout>
