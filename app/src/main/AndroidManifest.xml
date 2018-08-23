@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.howdo.myapplication">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 在SDCard中创建与删除文件权限 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <!-- 往SDCard写入数据权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:name=".misc.App"
@@ -87,7 +89,19 @@
             android:name=".ui.activity.seventhFirstCodeActivity"
             android:label="@string/title_activity_seventh_first_code"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.activity.EighthFirstCodeActivity"></activity>
+        <activity android:name=".ui.activity.EighthFirstCodeActivity" />
+        <activity android:name=".ui.activity.NewsContentActivity" />
+        <activity android:name=".ui.activity.BroadCastReceiverDemoActivity" />
+
+        <receiver
+            android:name=".BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>

@@ -64,4 +64,10 @@
         android:layout_height="wrap_content"
         android:text="newsFragmentDemo" />
 
+    <Button
+        android:id="@+id/first_code_button12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BroadCastReceiver" />
+
 </LinearLayout>

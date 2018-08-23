@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.howdo.myapplication.R;
 import com.example.howdo.myapplication.model.FragmentDemoNews;
-import com.example.howdo.myapplication.ui.activity.EighthFirstCodeActivity;
+import com.example.howdo.myapplication.ui.activity.NewsContentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,7 +82,7 @@ public class NewsTitleFragment extends Fragment {
                         NewsContentFragment newsContentFragment = (NewsContentFragment) getFragmentManager().findFragmentById(R.id.fragment_news_content);
                         newsContentFragment.refresh(fragmentDemoNews.getTitle(), fragmentDemoNews.getContent());
                     } else {
-                        EighthFirstCodeActivity.actionStart(getActivity(), fragmentDemoNews.getTitle(), fragmentDemoNews.getContent());
+                        NewsContentActivity.actionStart(getActivity(), fragmentDemoNews.getTitle(), fragmentDemoNews.getContent());
                     }
                 }
             });

@@ -36,6 +36,8 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
     Button FirstCodeButton10;
     @BindView(R.id.first_code_button11)
     Button FirstCodeButton11;
+    @BindView(R.id.first_code_button12)
+    Button FirstCodeButton12;
 
 
     private static final String TAG = "FirstCodeActivity";
@@ -120,6 +122,13 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FirstCodeActivity.this, EighthFirstCodeActivity.class);
+                startActivity(intent);
+            }
+        });
+        FirstCodeButton12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstCodeActivity.this, BroadCastReceiverDemoActivity.class);
                 startActivity(intent);
             }
         });
