@@ -2,6 +2,7 @@ package com.example.howdo.myapplication.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -14,10 +15,12 @@ import butterknife.BindView;
  * Created by howdo on 2016/11/3.
  */
 
-public class AboutMeActivity extends BaseActivity implements View.OnClickListener {
+public class AboutMeActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.contact)
+    FloatingActionButton floatingActionButton;
 
     @Override
     protected int getLayoutId() {
@@ -37,22 +40,12 @@ public class AboutMeActivity extends BaseActivity implements View.OnClickListene
         //设置工具栏标题
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle("尹东");
-    }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.contact:
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 clearAllActivity();
-                break;
-            case R.id.toolbar:
-                clearAllActivity();
-                break;
-            case R.id.backdrop:
-                finish();
-                break;
-            default:
-
-        }
+            }
+        });
     }
 }

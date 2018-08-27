@@ -70,4 +70,10 @@
         android:layout_height="wrap_content"
         android:text="BroadCastReceiver" />
 
+    <Button
+        android:id="@+id/first_code_button13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LoginView" />
+
 </LinearLayout>
