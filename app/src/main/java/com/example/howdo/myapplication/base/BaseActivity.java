@@ -1,13 +1,21 @@
 package com.example.howdo.myapplication.base;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.preference.DialogPreference;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.howdo.myapplication.R;
+import com.example.howdo.myapplication.ui.activity.LoginActivity;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import java.util.ArrayList;
@@ -27,6 +35,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     private ProgressDialog dialog;
     public Activity mActivity;
     private static final String TAG = "BaseActivity";
+    private ForceOfflineReceiver forceOfflineReceiver;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +60,24 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     protected abstract int getLayoutId();
 
     protected abstract void afterCreate(Bundle savedInstanceState);
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.example.howdo.FORCE_OFFLINE");
+        forceOfflineReceiver = new ForceOfflineReceiver();
+        registerReceiver(forceOfflineReceiver,intentFilter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (forceOfflineReceiver != null) {
+            unregisterReceiver(forceOfflineReceiver);
+            forceOfflineReceiver = null;
+        }
+    }
 
     public void showDialog() {
         if (!dialog.isShowing()) {
@@ -120,5 +147,25 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         }
 
         return true;
+    }
+
+    class ForceOfflineReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(final Context context, Intent intent) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Warning");
+            builder.setMessage("强制退出！");
+            builder.setCancelable(false);
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    clearAllActivity();
+                    Intent i = new Intent(context, LoginActivity.class);
+                    context.startActivity(i);
+                }
+            });
+            builder.show();
+        }
     }
 }

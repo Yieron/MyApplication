@@ -54,6 +54,9 @@ public class MainActivity extends BaseActivity {
     Button open_camera_gallery;
     @BindView(R.id.first_code)
     Button firstCode;
+    @BindView(R.id.broadcast_force_offline)
+    Button ForceOffline;
+
 
     @Override
     protected int getLayoutId() {
@@ -225,6 +228,15 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void call(Void aVoid) {
                         startActivity(new Intent(MainActivity.this,FirstCodeActivity.class));
+                    }
+                });
+        RxView.clicks(ForceOffline)
+                .throttleFirst(2,TimeUnit.SECONDS)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        Intent intent = new Intent("com.example.howdo.FORCE_OFFLINE");
+                        sendBroadcast(intent);
                     }
                 });
     }

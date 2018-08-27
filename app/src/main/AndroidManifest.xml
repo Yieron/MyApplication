@@ -126,6 +126,8 @@
         <activity
             android:name=".ui.activity.LoginActivity"
             android:label="@string/title_activity_login"></activity>
+        <activity android:name=".ui.activity.FilePersistenceActivity" />
+        <activity android:name=".ui.activity.SharedPreferenceActivity"></activity>
     </application>
 
 </manifest>

@@ -1,79 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <Button
-        android:id="@+id/first_code_button1"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/intent_demo1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/first_code_button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/intent_demo2" />
+        <Button
+            android:id="@+id/first_code_button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intent_demo1" />
 
-    <Button
-        android:id="@+id/first_code_button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/intent_demo3" />
+        <Button
+            android:id="@+id/first_code_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intent_demo2" />
 
-    <Button
-        android:id="@+id/first_code_button5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/intent_demo4" />
-    <Button
-        android:id="@+id/first_code_button6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lift_recycle" />
+        <Button
+            android:id="@+id/first_code_button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intent_demo3" />
 
-    <Button
-        android:id="@+id/first_code_button7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/first_code_widget" />
+        <Button
+            android:id="@+id/first_code_button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intent_demo4" />
 
-    <Button
-        android:id="@+id/first_code_button8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="recycleView" />
+        <Button
+            android:id="@+id/first_code_button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lift_recycle" />
 
-    <Button
-        android:id="@+id/first_code_button9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/chat_view" />
+        <Button
+            android:id="@+id/first_code_button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/first_code_widget" />
 
-    <Button
-        android:id="@+id/first_code_button10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fragment" />
+        <Button
+            android:id="@+id/first_code_button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="recycleView" />
 
-    <Button
-        android:id="@+id/first_code_button11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="newsFragmentDemo" />
+        <Button
+            android:id="@+id/first_code_button9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_view" />
 
-    <Button
-        android:id="@+id/first_code_button12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BroadCastReceiver" />
+        <Button
+            android:id="@+id/first_code_button10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fragment" />
 
-    <Button
-        android:id="@+id/first_code_button13"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LoginView" />
+        <Button
+            android:id="@+id/first_code_button11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="newsFragmentDemo" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/first_code_button12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BroadCastReceiver" />
+
+        <Button
+            android:id="@+id/first_code_button13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LoginView" />
+
+        <Button
+            android:id="@+id/first_code_button14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FilePersistence" />
+
+        <Button
+            android:id="@+id/first_code_button15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SharePreference" />
+
+
+    </LinearLayout>
+</ScrollView>

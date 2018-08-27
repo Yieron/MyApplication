@@ -3,6 +3,7 @@ package com.example.howdo.myapplication.ui.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -34,6 +35,7 @@ import java.util.List;
 
 import com.example.howdo.myapplication.R;
 import com.example.howdo.myapplication.base.BaseActivity;
+import com.example.howdo.myapplication.util.ToastUtil;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -339,7 +341,9 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             showProgress(false);
 
             if (success) {
-                finish();
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
+                ToastUtil.showText("进入主界面");
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
