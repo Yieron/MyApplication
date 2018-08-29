@@ -17,5 +17,11 @@
         android:id="@+id/first_code_read_sharedPreference"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sharedPreferenceText"/>
+        android:text="@string/readSharedPreference"/>
+
+    <Button
+        android:id="@+id/first_code_write_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/writeSqlite"/>
 </LinearLayout>

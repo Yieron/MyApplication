@@ -149,6 +149,8 @@
     <string name="open_gallery_camera">打开相机和相册</string>
     <string name="first_code">第一行代码</string>
     <string name="sharedPreferenceText">sharedPreference</string>
+    <string name="readSharedPreference">读取sharedPreference</string>
+    <string name="writeSqlite">写SQLite数据库</string>
     <string name="first_code_fragment">第一行代码的fragment</string>
     <string name="first_code_menu">第一行代码menu</string>
     <string name="title_activity_third_first_code">ThirdFirstCodeActivity</string>
