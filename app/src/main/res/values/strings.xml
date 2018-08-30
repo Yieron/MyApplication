@@ -161,6 +161,7 @@
     <string name="litePalUpdateData">litePal更新数据</string>
     <string name="litePalDeleteData">litePal删除数据</string>
     <string name="first_code_fragment">第一行代码的fragment</string>
+    <string name="first_code_content_provider">内容提供者</string>
     <string name="first_code_menu">第一行代码menu</string>
     <string name="title_activity_third_first_code">ThirdFirstCodeActivity</string>
     <string name="intent_demo1">隐式Intent</string>

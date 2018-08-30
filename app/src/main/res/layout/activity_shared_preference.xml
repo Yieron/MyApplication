@@ -1,78 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.activity.SharedPreferenceActivity">
 
-    <Button
-        android:id="@+id/first_code_sharedPreference"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sharedPreferenceText"/>
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/first_code_read_sharedPreference"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/readSharedPreference"/>
+        <Button
+            android:id="@+id/first_code_sharedPreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sharedPreferenceText" />
 
-    <Button
-        android:id="@+id/first_code_write_sqlite"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/writeSqlite"/>
+        <Button
+            android:id="@+id/first_code_read_sharedPreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/readSharedPreference" />
 
-    <Button
-        android:id="@+id/first_code_C"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/createData"/>
+        <Button
+            android:id="@+id/first_code_write_sqlite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/writeSqlite" />
 
-    <Button
-        android:id="@+id/first_code_r"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/retrieveData"/>
+        <Button
+            android:id="@+id/first_code_C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/createData" />
 
-    <Button
-        android:id="@+id/first_code_u"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/updateData"/>
+        <Button
+            android:id="@+id/first_code_r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/retrieveData" />
 
-    <Button
-        android:id="@+id/first_code_d"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/deleteData"/>
+        <Button
+            android:id="@+id/first_code_u"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/updateData" />
 
-    <Button
-        android:id="@+id/first_code_litepal_c"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/litePalCreateData"/>
+        <Button
+            android:id="@+id/first_code_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteData" />
 
-
-    <Button
-        android:id="@+id/first_code_litepal_u"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/litePalUpdateData"/>
-
-
-    <Button
-        android:id="@+id/first_code_litepal_r"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/litePalRetrieveData"/>
+        <Button
+            android:id="@+id/first_code_litepal_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/litePalCreateData" />
 
 
-    <Button
-        android:id="@+id/first_code_litepal_d"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/litePalDeleteData"/>
-</LinearLayout>
+        <Button
+            android:id="@+id/first_code_litepal_u"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/litePalUpdateData" />
+
+
+        <Button
+            android:id="@+id/first_code_litepal_r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/litePalRetrieveData" />
+
+
+        <Button
+            android:id="@+id/first_code_litepal_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/litePalDeleteData" />
+
+        <Button
+            android:id="@+id/first_code_contentProvider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/first_code_content_provider" />
+    </LinearLayout>
+
+</ScrollView>
