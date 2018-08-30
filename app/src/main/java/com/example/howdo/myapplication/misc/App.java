@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.example.howdo.myapplication.engine.Engine;
 
+import org.litepal.LitePal;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -19,6 +21,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        LitePal.initialize(this);
         sInstance = this;
 
         mEngine = new Retrofit.Builder()

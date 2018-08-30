@@ -24,4 +24,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/writeSqlite"/>
+
+    <Button
+        android:id="@+id/first_code_C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/createData"/>
+
+    <Button
+        android:id="@+id/first_code_r"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/retrieveData"/>
+
+    <Button
+        android:id="@+id/first_code_u"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/updateData"/>
+
+    <Button
+        android:id="@+id/first_code_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteData"/>
+
+    <Button
+        android:id="@+id/first_code_litepal_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/litePalCreateData"/>
+
+
+    <Button
+        android:id="@+id/first_code_litepal_u"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/litePalUpdateData"/>
+
+
+    <Button
+        android:id="@+id/first_code_litepal_r"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/litePalRetrieveData"/>
+
+
+    <Button
+        android:id="@+id/first_code_litepal_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/litePalDeleteData"/>
 </LinearLayout>

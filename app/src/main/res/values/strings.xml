@@ -151,6 +151,15 @@
     <string name="sharedPreferenceText">sharedPreference</string>
     <string name="readSharedPreference">读取sharedPreference</string>
     <string name="writeSqlite">写SQLite数据库</string>
+    <string name="createData">创建数据</string>
+    <string name="retrieveData">查询数据</string>
+    <string name="updateData">更新数据</string>
+    <string name="deleteData">删除数据</string>
+
+    <string name="litePalCreateData">litePal创建数据</string>
+    <string name="litePalRetrieveData">litePal查询数据</string>
+    <string name="litePalUpdateData">litePal更新数据</string>
+    <string name="litePalDeleteData">litePal删除数据</string>
     <string name="first_code_fragment">第一行代码的fragment</string>
     <string name="first_code_menu">第一行代码menu</string>
     <string name="title_activity_third_first_code">ThirdFirstCodeActivity</string>
