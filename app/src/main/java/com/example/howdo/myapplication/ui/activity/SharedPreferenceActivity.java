@@ -189,7 +189,7 @@ public class SharedPreferenceActivity extends AppCompatActivity implements View.
         }
     }
 
-    public class MyDatabaseHelper extends SQLiteOpenHelper {
+    public static class MyDatabaseHelper extends SQLiteOpenHelper {
 
         public static final String CREATE_CATEGORY = "create table Category("
                 + "id integer primary key autoincrement,"

@@ -126,9 +126,16 @@
 
         <activity
             android:name=".ui.activity.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity android:name=".ui.activity.FilePersistenceActivity" />
-        <activity android:name=".ui.activity.SharedPreferenceActivity"></activity>
+        <activity android:name=".ui.activity.SharedPreferenceActivity" />
+        <activity android:name=".ui.activity.ContentProviderActivity" />
+
+        <provider
+            android:name=".contentProvider.DatabaseContentProvider"
+            android:authorities="com.example.howdo.myapplication.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>

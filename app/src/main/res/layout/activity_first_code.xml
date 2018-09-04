@@ -92,7 +92,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SharePreference" />
-
+        <Button
+            android:id="@+id/first_code_button16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ContentProvider" />
 
     </LinearLayout>
 </ScrollView>
