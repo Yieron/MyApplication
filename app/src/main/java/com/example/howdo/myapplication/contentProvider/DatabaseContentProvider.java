@@ -33,7 +33,28 @@ public class DatabaseContentProvider extends ContentProvider {
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         // Implement this to handle requests to delete one or more rows.
-        throw new UnsupportedOperationException("Not yet implemented");
+//        throw new UnsupportedOperationException("Not yet implemented");
+        SQLiteDatabase database = myDatabaseHelper.getWritableDatabase();
+        int deleteRows = 0;
+        switch (uriMatcher.match(uri)) {
+            case BOOK_DIR:
+                deleteRows = database.delete("Book", selection, selectionArgs);
+                break;
+            case BOOK_ITEM:
+                String bookId = uri.getPathSegments().get(1);
+                deleteRows = database.delete("Book", "id=?", new String[]{bookId});
+                break;
+            case CATEGORY_DIR:
+                deleteRows = database.delete("Category", selection, selectionArgs);
+                break;
+            case CATEGORY_ITEM:
+                String categoryId = uri.getPathSegments().get(1);
+                deleteRows = database.delete("Category", "id=?", new String[]{categoryId});
+                break;
+            default:
+                break;
+        }
+        return deleteRows;
     }
 
     @Override
@@ -117,6 +138,25 @@ public class DatabaseContentProvider extends ContentProvider {
     public int update(Uri uri, ContentValues values, String selection,
                       String[] selectionArgs) {
         // TODO: Implement this to handle requests to update one or more rows.
-        throw new UnsupportedOperationException("Not yet implemented");
+//        throw new UnsupportedOperationException("Not yet implemented");
+        SQLiteDatabase database = myDatabaseHelper.getWritableDatabase();
+        int updatedRows = 0;
+        switch (uriMatcher.match(uri)) {
+            case BOOK_DIR:
+                updatedRows = database.update("Book", values, selection, selectionArgs);
+                break;
+            case BOOK_ITEM:
+                String bookId = uri.getPathSegments().get(1);
+                updatedRows = database.update("Book", values, "id=?", new String[]{bookId});
+                break;
+            case CATEGORY_ITEM:
+                String catagoryId = uri.getPathSegments().get(1);
+                updatedRows = database.update("Category", values, "id=?", new String[]{catagoryId});
+                break;
+            case CATEGORY_DIR:
+                updatedRows = database.update("Category", values, selection, selectionArgs);
+                break;
+        }
+        return updatedRows;
     }
 }

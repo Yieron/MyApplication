@@ -135,7 +135,9 @@
             android:name=".contentProvider.DatabaseContentProvider"
             android:authorities="com.example.howdo.myapplication.provider"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true">
+
+        </provider>
     </application>
 
 </manifest>
