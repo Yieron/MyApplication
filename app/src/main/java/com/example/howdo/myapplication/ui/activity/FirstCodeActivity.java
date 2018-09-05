@@ -1,8 +1,14 @@
 package com.example.howdo.myapplication.ui.activity;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +18,8 @@ import android.widget.Button;
 import com.example.howdo.myapplication.R;
 import com.example.howdo.myapplication.base.BaseActivity;
 import com.example.howdo.myapplication.util.ToastUtil;
+
+import java.io.File;
 
 import butterknife.BindView;
 
@@ -46,6 +54,8 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
     Button FirstCodeButton15;
     @BindView(R.id.first_code_button16)
     Button FirstCodeButton16;
+    @BindView(R.id.first_code_button17)
+    Button FirstCodeButton17;
 
     private static final String TAG = "FirstCodeActivity";
 
@@ -165,6 +175,28 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
             public void onClick(View v) {
                 Intent intent = new Intent(FirstCodeActivity.this, ContentProviderActivity.class);
                 startActivity(intent);
+            }
+        });
+        FirstCodeButton17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstCodeActivity.this,AboutMeActivity.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(FirstCodeActivity.this,0,intent,0);
+                NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                Notification notification = new NotificationCompat.Builder(FirstCodeActivity.this)
+                        .setContentTitle("这是一个重要的通知")
+                        .setContentText("尹东东发通知啦")
+                        .setWhen(System.currentTimeMillis())
+                        .setSmallIcon(R.mipmap.icon2)
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher))
+                        .setContentIntent(pendingIntent)
+                        .setAutoCancel(true)
+                        .setSound(Uri.fromFile(new File("/system/media/audio/ringtones/Aquila.ogg")))
+                        .setVibrate(new long[]{0,1000,1000,1000})
+                        .setLights(Color.GREEN,1000,1000)
+                        .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(getResources(),R.mipmap.android)))
+                        .build();
+                        manager.notify(1,notification);
             }
         });
     }

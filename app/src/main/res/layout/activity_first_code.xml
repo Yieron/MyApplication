@@ -97,6 +97,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ContentProvider" />
-
+        <Button
+            android:id="@+id/first_code_button17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification" />
     </LinearLayout>
 </ScrollView>
