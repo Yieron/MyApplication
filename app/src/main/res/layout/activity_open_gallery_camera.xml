@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.OpenGalleryCameraActivity">
+
+    <Button
+        android:id="@+id/first_code_open_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_camera"/>
+
+    <Button
+        android:id="@+id/first_code_open_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_gallery"/>
+
+    <ImageView
+        android:id="@+id/first_code_img_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

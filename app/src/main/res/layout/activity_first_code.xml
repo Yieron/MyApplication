@@ -102,5 +102,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Notification" />
+
+        <Button
+            android:id="@+id/first_code_button18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Camera" />
     </LinearLayout>
 </ScrollView>

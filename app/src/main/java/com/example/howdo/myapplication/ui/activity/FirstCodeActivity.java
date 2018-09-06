@@ -56,6 +56,8 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
     Button FirstCodeButton16;
     @BindView(R.id.first_code_button17)
     Button FirstCodeButton17;
+    @BindView(R.id.first_code_button18)
+    Button FirstCodeButton18;
 
     private static final String TAG = "FirstCodeActivity";
 
@@ -197,6 +199,13 @@ public class FirstCodeActivity extends BaseActivity implements View.OnClickListe
                         .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(getResources(),R.mipmap.android)))
                         .build();
                         manager.notify(1,notification);
+            }
+        });
+        FirstCodeButton18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstCodeActivity.this, OpenGalleryCameraActivity.class);
+                startActivity(intent);
             }
         });
     }
