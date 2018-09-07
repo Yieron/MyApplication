@@ -13,7 +13,8 @@
             android:id="@+id/first_code_button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/intent_demo1" />
+            android:text="@string/intent_demo1"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button2"
@@ -49,7 +50,8 @@
             android:id="@+id/first_code_button8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="recycleView" />
+            android:text="recycleView"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button9"
@@ -61,52 +63,76 @@
             android:id="@+id/first_code_button10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fragment" />
+            android:text="Fragment"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="newsFragmentDemo" />
+            android:text="newsFragmentDemo"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BroadCastReceiver" />
+            android:text="BroadCastReceiver"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LoginView" />
+            android:text="LoginView"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FilePersistence" />
+            android:text="FilePersistence"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SharePreference" />
+            android:text="SharePreference"
+            android:textAllCaps="false"/>
         <Button
             android:id="@+id/first_code_button16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ContentProvider" />
+            android:text="ContentProvider"
+            android:textAllCaps="false"/>
         <Button
             android:id="@+id/first_code_button17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Notification" />
+            android:text="Notification"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/first_code_button18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Camera" />
+            android:text="Camera"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/first_code_button19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MediaPlayer"
+            android:textAllCaps="false"/>
+
+
+        <Button
+            android:id="@+id/first_code_button20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VideoView"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </ScrollView>
