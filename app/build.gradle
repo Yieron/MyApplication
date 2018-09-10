@@ -91,6 +91,11 @@ dependencies {
     compile 'cn.bingoogolapple:bga-photopicker:1.2.2@aar'
     //litepal
     compile 'org.litepal.android:core:2.0.0'
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+
 }
 repositories {
     mavenCentral()

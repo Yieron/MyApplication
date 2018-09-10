@@ -149,7 +149,20 @@
 
         <activity android:name=".ui.activity.OpenGalleryCameraActivity" />
         <activity android:name=".ui.activity.MediaPlayerActivity" />
-        <activity android:name=".ui.activity.VideoViewActivity"></activity>
+        <activity android:name=".ui.activity.VideoViewActivity" />
+        <activity android:name=".ui.activity.ServiceDemoActivity" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

@@ -8,8 +8,15 @@ import android.view.View;
 
 import com.example.howdo.myapplication.R;
 import com.example.howdo.myapplication.base.BaseActivity;
+import com.example.howdo.myapplication.http.HttpRequest;
+import com.example.howdo.myapplication.httpCallback.HttpCallbackListener;
+
+import java.io.IOException;
 
 import butterknife.BindView;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 /**
  * Created by howdo on 2016/11/3.
@@ -45,6 +52,32 @@ public class AboutMeActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 clearAllActivity();
+            }
+        });
+
+        String address = "http://www.baidu.com";
+        HttpRequest.sendHttpRequest(address, new HttpCallbackListener() {
+            @Override
+            public void onFinish(String response) {
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
+
+
+        HttpRequest.sendOkHttpRequest(address, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String responseData = response.body().string();
             }
         });
     }

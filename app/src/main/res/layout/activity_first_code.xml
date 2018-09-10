@@ -134,5 +134,12 @@
             android:layout_height="wrap_content"
             android:text="VideoView"
             android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/first_code_button21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Service"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ServiceDemoActivity">
+
+    <Button
+        android:id="@+id/first_code_handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change text"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/first_code_AsyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_handler"
+        android:text="AsyncTask"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/first_code_start_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_AsyncTask"
+        android:text="start_service"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/first_code_stop_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_start_service"
+        android:text="stop_service"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/first_code_bind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_stop_service"
+        android:text="bind"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/first_code_unbind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_bind_service"
+        android:text="unbind"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/first_code_start_intent_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_unbind_service"
+        android:text="start_intentService"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/first_code_start_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_start_intent_service"
+        android:text="start_download"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/first_code_pause_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_start_download"
+        android:text="pause_download"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/first_code_start_cancel_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_code_pause_download"
+        android:text="cancel_download"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/first_code_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/textSize_18" />
+
+</RelativeLayout>
