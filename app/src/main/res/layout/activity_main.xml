@@ -126,5 +126,12 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:text="@string/force_offline" />
 
+        <Button
+            android:id="@+id/baidu_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/baidu_map" />
+
     </LinearLayout>
 </ScrollView>

@@ -7,6 +7,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Binder;
+import android.os.Environment;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 
@@ -14,6 +15,10 @@ import com.example.howdo.myapplication.R;
 import com.example.howdo.myapplication.http.DownloadListener;
 import com.example.howdo.myapplication.ui.activity.ServiceDemoActivity;
 import com.example.howdo.myapplication.util.ToastUtil;
+
+import java.io.File;
+
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 public class DownloadService extends Service {
     private DownloadTask downloadTask;
@@ -51,24 +56,59 @@ public class DownloadService extends Service {
 
         @Override
         public void onCanceled() {
-            downloadTask=null;
+            downloadTask = null;
             stopForeground(true);
             ToastUtil.showText("Canceled");
         }
     };
 
     public DownloadService() {
+
     }
+
+    private DownloadBinder mBinder = new DownloadBinder();
 
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+//        throw new UnsupportedOperationException("Not yet implemented");
+        return mBinder;
     }
 
-    class DownloadBinder extends Binder{
-        public void startDownload(String url){
+    public class DownloadBinder extends Binder {
+        public void startDownload(String url) {
+            if (downloadTask == null) {
+                downloadUrl = url;
+                downloadTask = new DownloadTask(listener);
+                downloadTask.execute(downloadUrl);
+                startForeground(1, getNotification("Downloading....", 0));
+                ToastUtil.showText("Downloading");
+            }
+        }
 
+        public void pauseDownload() {
+            if (downloadTask != null) {
+                downloadTask.pauseDownload();
+            }
+        }
+
+        public void cancelDownload() {
+            if (downloadTask != null) {
+                downloadTask.cancelDownload();
+            }
+
+            if (downloadUrl != null) {
+                String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));
+                String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
+
+                File file = new File(directory + fileName);
+                if (file.exists()) {
+                    file.delete();
+                }
+                getNotificationManage().cancel(1);
+                stopForeground(true);
+                ToastUtil.showText("canceled");
+            }
         }
     }
 

@@ -56,6 +56,8 @@ public class MainActivity extends BaseActivity {
     Button firstCode;
     @BindView(R.id.broadcast_force_offline)
     Button ForceOffline;
+    @BindView(R.id.baidu_location)
+    Button baiduMap;
 
 
     @Override
@@ -237,6 +239,15 @@ public class MainActivity extends BaseActivity {
                     public void call(Void aVoid) {
                         Intent intent = new Intent("com.example.howdo.FORCE_OFFLINE");
                         sendBroadcast(intent);
+                    }
+                });
+
+        RxView.clicks(baiduMap)
+                .throttleFirst(2,TimeUnit.SECONDS)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+
                     }
                 });
     }

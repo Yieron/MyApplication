@@ -147,4 +147,12 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
                 break;
         }
     }
+
+    public void pauseDownload() {
+        isPaused = true;
+    }
+
+    public void cancelDownload() {
+        isCanceled = true;
+    }
 }
