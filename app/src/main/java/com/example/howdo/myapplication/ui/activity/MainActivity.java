@@ -247,7 +247,7 @@ public class MainActivity extends BaseActivity {
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
-
+                        startActivity(new Intent(MainActivity.this, BaiduMapActivity.class));
                     }
                 });
     }

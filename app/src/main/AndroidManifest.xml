@@ -18,6 +18,11 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".misc.App"
@@ -27,6 +32,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="5rulzpkGdy9qjq2Btry1IqQupZFebou1" />
+
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -163,6 +172,12 @@
             android:name=".service.DownloadService"
             android:enabled="true"
             android:exported="true"></service>
+        <service
+            android:name="com.baidu.location.f"
+            android:exported="true"
+            android:process=":remote"></service>
+
+        <activity android:name=".ui.activity.BaiduMapActivity"></activity>
     </application>
 
 </manifest>
