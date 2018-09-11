@@ -2,6 +2,10 @@ package com.example.howdo.myapplication.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.howdo.myapplication.R;
 import com.example.howdo.myapplication.base.BaseActivity;
+import com.example.howdo.myapplication.util.ToastUtil;
 import com.jakewharton.rxbinding.view.RxView;
 
 import java.util.concurrent.TimeUnit;
@@ -59,6 +64,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.baidu_location)
     Button baiduMap;
 
+    private DrawerLayout drawerLayout;
 
     @Override
     protected int getLayoutId() {
@@ -83,12 +89,32 @@ public class MainActivity extends BaseActivity {
             case R.id.about_me:
                 startActivity(new Intent(MainActivity.this, AboutMeActivity.class));
                 break;
+            case R.id.me:
+                ToastUtil.showText("我最帅");
+                break;
+            case R.id.my_dear:
+                ToastUtil.showText("大美女");
+                break;
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
+                break;
+            default:
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     private void initData() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.first_code_toolbar);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar!=null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.mipmap.bga_refresh_mt_refreshing_05);
+        }
+
         repalceDemo();
         RxView.clicks(mix_text_pic)
                 .throttleFirst(2, TimeUnit.SECONDS)
@@ -225,15 +251,15 @@ public class MainActivity extends BaseActivity {
                 });
 
         RxView.clicks(firstCode)
-                .throttleFirst(2,TimeUnit.SECONDS)
+                .throttleFirst(2, TimeUnit.SECONDS)
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
-                        startActivity(new Intent(MainActivity.this,FirstCodeActivity.class));
+                        startActivity(new Intent(MainActivity.this, FirstCodeActivity.class));
                     }
                 });
         RxView.clicks(ForceOffline)
-                .throttleFirst(2,TimeUnit.SECONDS)
+                .throttleFirst(2, TimeUnit.SECONDS)
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
@@ -243,7 +269,7 @@ public class MainActivity extends BaseActivity {
                 });
 
         RxView.clicks(baiduMap)
-                .throttleFirst(2,TimeUnit.SECONDS)
+                .throttleFirst(2, TimeUnit.SECONDS)
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
