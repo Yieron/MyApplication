@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_yully"
+            android:icon="@drawable/abc_btn_radio_material"
+            android:title="Yully"/>
+
+        <item
+            android:id="@+id/nav_yieron"
+            android:icon="@drawable/abc_btn_radio_material"
+            android:title="Yieron"/>
+
+        <item
+            android:id="@+id/nav_yindong"
+            android:icon="@drawable/abc_btn_radio_material"
+            android:title="Yindong"/>
+
+        <item
+            android:id="@+id/nav_yuli"
+            android:icon="@drawable/abc_btn_radio_material"
+            android:title="Yuli"/>
+
+    </group>
+
+</menu>

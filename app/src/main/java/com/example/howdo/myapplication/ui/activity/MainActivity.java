@@ -2,10 +2,13 @@ package com.example.howdo.myapplication.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -65,6 +68,7 @@ public class MainActivity extends BaseActivity {
     Button baiduMap;
 
     private DrawerLayout drawerLayout;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected int getLayoutId() {
@@ -108,14 +112,40 @@ public class MainActivity extends BaseActivity {
     private void initData() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.first_code_toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar!=null){
+        if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.mipmap.bga_refresh_mt_refreshing_05);
         }
 
         repalceDemo();
+        navigationView.setCheckedItem(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId = item.getItemId();
+                switch (itemId) {
+                    case R.id.nav_yuli:
+                        ToastUtil.showText("yully");
+                        break;
+                    case R.id.nav_yindong:
+                        ToastUtil.showText("yindong");
+                        break;
+                    case R.id.nav_yieron:
+                        ToastUtil.showText("yieron");
+                        break;
+                    case R.id.nav_yully:
+                        ToastUtil.showText("yully");
+                        break;
+                    default:
+                        break;
+                }
+                drawerLayout.closeDrawers();
+                return true;
+            }
+        });
         RxView.clicks(mix_text_pic)
                 .throttleFirst(2, TimeUnit.SECONDS)
                 .subscribe(new Action1<Void>() {
